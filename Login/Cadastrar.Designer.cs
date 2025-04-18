@@ -1,6 +1,7 @@
-﻿namespace Login
+﻿
+namespace Login
 {
-    partial class Form1
+    partial class CadastraUsuario
     {
         /// <summary>
         ///  Required designer variable.
@@ -42,6 +43,7 @@
             txtCpfCadastro = new TextBox();
             label6 = new Label();
             label7 = new Label();
+            txtNomeCadastro = new TextBox();
             SuspendLayout();
             // 
             // btnCadastrarUsuario
@@ -52,6 +54,7 @@
             btnCadastrarUsuario.TabIndex = 0;
             btnCadastrarUsuario.Text = "Cadatrar";
             btnCadastrarUsuario.UseVisualStyleBackColor = true;
+            btnCadastrarUsuario.Click += btnCadastrarUsuario_Click;
             // 
             // label1
             // 
@@ -135,6 +138,7 @@
             LimparFormulario.TabIndex = 3;
             LimparFormulario.Text = "Limpar";
             LimparFormulario.UseVisualStyleBackColor = true;
+            LimparFormulario.Click += LimparFormulario_Click;
             // 
             // txtCpfCadastro
             // 
@@ -152,7 +156,7 @@
             label6.Size = new Size(28, 15);
             label6.TabIndex = 1;
             label6.Text = "CPF";
-            label6.Click += this.label6_Click;
+            label6.Click += Label6_Click;
             // 
             // label7
             // 
@@ -164,11 +168,19 @@
             label7.TabIndex = 4;
             label7.Text = "Cadastro:";
             // 
-            // Form1
+            // txtNomeCadastro
+            // 
+            txtNomeCadastro.Location = new Point(17, 60);
+            txtNomeCadastro.Name = "txtNomeCadastro";
+            txtNomeCadastro.Size = new Size(215, 23);
+            txtNomeCadastro.TabIndex = 5;
+            // 
+            // CadastraUsuario
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(260, 354);
+            Controls.Add(txtNomeCadastro);
             Controls.Add(label7);
             Controls.Add(LimparFormulario);
             Controls.Add(txtTelefoneCadastro);
@@ -183,10 +195,15 @@
             Controls.Add(txtEmailCadastro);
             Controls.Add(label1);
             Controls.Add(btnCadastrarUsuario);
-            Name = "Form1";
+            Name = "CadastraUsuario";
             Text = "Cadastrar usuario";
             ResumeLayout(false);
             PerformLayout();
+        }
+
+        private void Label6_Click(object sender, EventArgs e)
+        {
+            throw new NotImplementedException();
         }
 
         #endregion
@@ -205,5 +222,6 @@
         private TextBox txtCpfCadastro;
         private Label label6;
         private Label label7;
+        private TextBox txtNomeCadastro;
     }
 }

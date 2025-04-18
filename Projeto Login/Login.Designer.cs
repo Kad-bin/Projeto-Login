@@ -1,6 +1,6 @@
 ﻿namespace Projeto_Login
 {
-    partial class Form1
+    partial class Login
     {
         /// <summary>
         ///  Required designer variable.
@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
             btnCadatrar = new Button();
             label1 = new Label();
             label2 = new Label();
@@ -38,59 +39,67 @@
             txtEmail = new TextBox();
             label5 = new Label();
             txtSenha = new TextBox();
+            pictureBox1 = new PictureBox();
+            pictureBox2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
             // btnCadatrar
             // 
-            btnCadatrar.Location = new Point(12, 311);
+            btnCadatrar.BackgroundImage = Properties.Resources.key;
+            btnCadatrar.FlatStyle = FlatStyle.Popup;
+            btnCadatrar.Location = new Point(328, 135);
             btnCadatrar.Name = "btnCadatrar";
-            btnCadatrar.Size = new Size(103, 31);
+            btnCadatrar.Size = new Size(69, 59);
             btnCadatrar.TabIndex = 0;
-            btnCadatrar.Text = "Cadastrar";
             btnCadatrar.UseVisualStyleBackColor = true;
+            btnCadatrar.Click += btnCadatrar_Click;
             // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Location = new Point(12, 293);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(202, 169);
             label1.Name = "label1";
-            label1.Size = new Size(161, 15);
+            label1.Size = new Size(97, 25);
             label1.TabIndex = 1;
-            label1.Text = "Caso nao tenha um cadastro:";
+            label1.Text = "Cadastrar";
             label1.Click += label1_Click;
             // 
             // label2
             // 
             label2.AutoSize = true;
-            label2.Font = new Font("Segoe UI", 20.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
-            label2.Location = new Point(12, 9);
+            label2.Font = new Font("Segoe UI", 21.75F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label2.Location = new Point(74, 9);
             label2.Name = "label2";
-            label2.Size = new Size(153, 37);
+            label2.Size = new Size(198, 40);
             label2.TabIndex = 2;
-            label2.Text = "Faça login:";
+            label2.Text = "login usuário";
             label2.Click += label2_Click;
             // 
             // btnLogin
             // 
-            btnLogin.Location = new Point(12, 197);
+            btnLogin.BackgroundImage = (Image)resources.GetObject("btnLogin.BackgroundImage");
+            btnLogin.FlatStyle = FlatStyle.Popup;
+            btnLogin.Location = new Point(328, 84);
             btnLogin.Name = "btnLogin";
-            btnLogin.Size = new Size(75, 23);
+            btnLogin.Size = new Size(71, 74);
             btnLogin.TabIndex = 3;
-            btnLogin.Text = "Entrar";
             btnLogin.UseVisualStyleBackColor = true;
             btnLogin.Click += btnLogin_Click;
             // 
             // txtNome
             // 
-            txtNome.Location = new Point(15, 77);
+            txtNome.Location = new Point(9, 88);
             txtNome.Name = "txtNome";
-            txtNome.Size = new Size(187, 23);
+            txtNome.Size = new Size(316, 23);
             txtNome.TabIndex = 4;
             // 
             // label3
             // 
             label3.AutoSize = true;
-            label3.Location = new Point(12, 59);
+            label3.Location = new Point(9, 70);
             label3.Name = "label3";
             label3.Size = new Size(40, 15);
             label3.TabIndex = 5;
@@ -99,7 +108,7 @@
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(12, 106);
+            label4.Location = new Point(6, 117);
             label4.Name = "label4";
             label4.Size = new Size(36, 15);
             label4.TabIndex = 7;
@@ -107,15 +116,15 @@
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(15, 124);
+            txtEmail.Location = new Point(9, 135);
             txtEmail.Name = "txtEmail";
-            txtEmail.Size = new Size(187, 23);
+            txtEmail.Size = new Size(129, 23);
             txtEmail.TabIndex = 6;
             // 
             // label5
             // 
             label5.AutoSize = true;
-            label5.Location = new Point(12, 150);
+            label5.Location = new Point(189, 117);
             label5.Name = "label5";
             label5.Size = new Size(39, 15);
             label5.TabIndex = 9;
@@ -123,16 +132,37 @@
             // 
             // txtSenha
             // 
-            txtSenha.Location = new Point(15, 168);
+            txtSenha.Location = new Point(189, 135);
             txtSenha.Name = "txtSenha";
-            txtSenha.Size = new Size(187, 23);
+            txtSenha.Size = new Size(136, 23);
             txtSenha.TabIndex = 8;
+            txtSenha.TextChanged += txtSenha_TextChanged;
             // 
-            // Form1
+            // pictureBox1
+            // 
+            pictureBox1.Image = Properties.Resources.user_add;
+            pictureBox1.Location = new Point(1, -4);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(67, 60);
+            pictureBox1.TabIndex = 10;
+            pictureBox1.TabStop = false;
+            // 
+            // pictureBox2
+            // 
+            pictureBox2.Image = Properties.Resources.arrow_right;
+            pictureBox2.Location = new Point(276, 144);
+            pictureBox2.Name = "pictureBox2";
+            pictureBox2.Size = new Size(97, 50);
+            pictureBox2.TabIndex = 11;
+            pictureBox2.TabStop = false;
+            // 
+            // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(229, 354);
+            ClientSize = new Size(411, 208);
+            Controls.Add(label1);
+            Controls.Add(pictureBox1);
             Controls.Add(label5);
             Controls.Add(txtSenha);
             Controls.Add(label4);
@@ -141,10 +171,12 @@
             Controls.Add(txtNome);
             Controls.Add(btnLogin);
             Controls.Add(label2);
-            Controls.Add(label1);
             Controls.Add(btnCadatrar);
-            Name = "Form1";
+            Controls.Add(pictureBox2);
+            Name = "Login";
             Text = "Login";
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
             ResumeLayout(false);
             PerformLayout();
         }
@@ -161,5 +193,7 @@
         private TextBox txtEmail;
         private Label label5;
         private TextBox txtSenha;
+        private PictureBox pictureBox1;
+        private PictureBox pictureBox2;
     }
 }
