@@ -95,6 +95,7 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(316, 23);
             txtNome.TabIndex = 4;
+            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // label3
             // 
@@ -120,6 +121,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(129, 23);
             txtEmail.TabIndex = 6;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label5
             // 

@@ -26,6 +26,14 @@ namespace Projeto_Login
         {
             try
             {
+
+                string nome = txtNome.Text;
+                string email = txtEmail.Text;
+                string senha = txtSenha.Text;
+                string confirmarSenha = txtConfirmarSenha.Text;
+                string telefone = txtTelefone.Text;
+                string cpf = txtCpf.Text;
+
                 if (string.IsNullOrWhiteSpace(txtNome.Text) ||
                     string.IsNullOrWhiteSpace(txtEmail.Text) ||
                     string.IsNullOrWhiteSpace(txtSenha.Text) ||
@@ -42,13 +50,36 @@ namespace Projeto_Login
                     return;
                 }
 
+                
+                else if (!VerificarEmail.EmailValidator.IsValidEmail(email))
+                {
+                    MessageBox.Show("Email inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!ValidarNome.ValidarNomes(nome))
+                {
+                    MessageBox.Show("Nome inválido. O nome deve conter apenas letras e espaços.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if  (!ValidarTelefone.ValidarTelefones(telefone))
+                {
+                    MessageBox.Show("Telefone inválido. O telefone deve estar no formato (XX) XXXX-XXXX.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                //else if (!ValidarCpf.ValidarCpf(cpf))
+                //{
+                //    MessageBox.Show("CPF inválido. O CPF deve conter 11 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                //    return;
+                //}
+                else
+                {
+                    
+                }
 
-                string nome = txtNome.Text;
-                string email = txtEmail.Text;
-                string senha = txtSenha.Text;
-                string confirmarSenha = txtConfirmarSenha.Text;
-                string telefone = txtTelefone.Text;
-                string cpf = txtCpf.Text;
+
+
+
+
 
                 MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
@@ -76,7 +107,7 @@ namespace Projeto_Login
             txtTelefone.Text = " ";
             txtUsuario.Text = " ";
             txtNome.Focus();
-            
+
         }
 
         private void txtSenha_TextChanged(object sender, EventArgs e)
@@ -88,6 +119,11 @@ namespace Projeto_Login
         private void txtConfirmarSenha_TextChanged(object sender, EventArgs e)
         {
             txtConfirmarSenha.PasswordChar = '●';
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+            
         }
     }
 }

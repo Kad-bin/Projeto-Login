@@ -128,6 +128,7 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(193, 23);
             txtEmail.TabIndex = 7;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label5
             // 

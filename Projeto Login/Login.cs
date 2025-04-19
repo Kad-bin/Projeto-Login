@@ -1,8 +1,10 @@
-﻿namespace Projeto_Login
+﻿using System.Diagnostics.Eventing.Reader;
+
+namespace Projeto_Login
 {
     public partial class Login : Form
     {
-       
+
         public Login()
         {
             InitializeComponent();
@@ -29,12 +31,26 @@
                 {
                     MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                else if (!VerificarEmail.EmailValidator.IsValidEmail(email))
+                {
+                    MessageBox.Show("Email inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
+                else if (!ValidarNome.ValidarNomes(usuario))
+                {
+                    MessageBox.Show("Nome inválido. O nome deve conter apenas letras e espaços.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    return;
+                }
                 else
                 {
 
                     MessageBox.Show("Login realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
                     return;
                 }
+
+
+
+
             }
             catch (Exception ex)
             {
@@ -58,7 +74,19 @@
         private void txtSenha_TextChanged(object sender, EventArgs e)
         {
             txtSenha.PasswordChar = '●';
-            
+
+
+        }
+
+        private void txtEmail_TextChanged(object sender, EventArgs e)
+        {
+
+            txtEmail.MaxLength = 50;
+
+        }
+
+        private void txtNome_TextChanged(object sender, EventArgs e)
+        {
 
         }
     }
