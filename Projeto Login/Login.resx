@@ -121,7 +121,7 @@
   <data name="btnLogin.BackgroundImage" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
     <value>
         iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAABGdBTUEAALGPC/xhBQAAAAlwSFlzAAAO
-        vAAADrwBlbxySQAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKMSURBVHhe7dw/
+        vwAADr8BOAVTJAAAABl0RVh0U29mdHdhcmUAd3d3Lmlua3NjYXBlLm9yZ5vuPBoAAAKMSURBVHhe7dw/
         aBRpAMbhqKCFoFgIeqCFdjai2An2olxz2KqNYGFh4R9QFG3ETgtLG0GE4ziuuwO1shdEwU5LKxu1E0Xf
         DxkYwpfdzeTy7cI8D/wgZGcTyLxJZjdLlgAAAAAAAAAAACY6nB6lN+ldrz2p8yC9X0PHU+dE2vnrTebt
         XPqWflTalzp/pdoxs3Yqda6m18kI5qx856908kvrOYDyPiOYs/Jjf/mJ6rfeAygZwRyVL37/JC2vxQBK
@@ -134,21 +134,6 @@
         XS/T2VReN1CeEDqSrqUPqXb8rBlAI2sdwHplAI0YwMgZwMgZwMgZwMgZwMgZwMgZwMgZwMhdSeWLvWj1
         /6MYAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAMt7T0E3mstITUr+R8AAAAAElFTkSu
         QmCC
-</value>
-  </data>
-  <data name="pictureBox2.Image" type="System.Drawing.Bitmap, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
-    <value>
-        iVBORw0KGgoAAAANSUhEUgAAAIAAAACACAYAAADDPmHLAAAAAXNSR0IArs4c6QAAAARnQU1BAACxjwv8
-        YQUAAAAJcEhZcwAADsIAAA7CARUoSoAAAAAZdEVYdFNvZnR3YXJlAHd3dy5pbmtzY2FwZS5vcmeb7jwa
-        AAAB9UlEQVR4Xu3au65MURwG8AlxKdATvIfL47gUQlwSXgKJUqlAKxR6dEKUerdHQKLwfTMnEts5M3Mq
-        WXN+v+RL1t7ndGut/7rsmQEAAADAOvYn55Obyf2ttH0u2ZewoQ4l15NvyffkVfJ4K6+TH0n/di05mLBB
-        Ticfkk/JheRIMnU0uZh8Tt4npxI2QDv/a/Is2a7jpzoQnidfEoNgcC37nfnt/N2s7/3fDoJ3ieVgYF3z
-        W/bXmflTrQRdDq7OnxhOd/vd1HXNX+ZOcnzR/MelpMuH08GAetTrbn/V7G+p/5icmD/97VjS08HZ+RND
-        uZX0qLfK4eRlstMgeJP0noDB3EueLJp/tBo8SB5O8ij5lXQQTCvG0+TuoslIDIA9zhKwx/Vuvxu4HueW
-        WbUJ/JmcmT8xlB7deoTr9e4yt5OdjoGXk94IOgYOqh92epmzqgpsp7O/A+jK/Ikh9Rq3H3Za5nd7Ffwi
-        eZsc6AvG1Q86LeMdBOtUgs78dn4rx8m+YHwdBP2w007t9W47earvuua37Hfm6/wN0+WgH3bawT0d9HjX
-        e4Km7e72Wym65iv7G6zre+/2byT9OVgvjNruUc9uHwAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA
-        AAAAAAAAAAAAAAAAAAAAAAAAAID/Zzb7DeEQViHKSl2sAAAAAElFTkSuQmCC
 </value>
   </data>
 </root>
