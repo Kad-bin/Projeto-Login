@@ -31,15 +31,15 @@ namespace Projeto_Login
                 string email = txtEmail.Text;
                 string senha = txtSenha.Text;
                 string confirmarSenha = txtConfirmarSenha.Text;
-                string telefone = txtTelefone.Text;
-                string cpf = txtCpf.Text;
+                string telefone = maskedTxtTelefone.Text;
+                string cpf = maskedCpf.Text;
 
                 if (string.IsNullOrWhiteSpace(txtNome.Text) ||
                     string.IsNullOrWhiteSpace(txtEmail.Text) ||
                     string.IsNullOrWhiteSpace(txtSenha.Text) ||
                     string.IsNullOrWhiteSpace(txtConfirmarSenha.Text) ||
-                    string.IsNullOrWhiteSpace(txtTelefone.Text) ||
-                    string.IsNullOrWhiteSpace(txtCpf.Text))
+                    string.IsNullOrWhiteSpace(maskedTxtTelefone.Text) ||
+                    string.IsNullOrWhiteSpace(maskedCpf.Text))
                 {
                     MessageBox.Show("Preencha todos os campos obrigatórios.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
@@ -50,7 +50,7 @@ namespace Projeto_Login
                     return;
                 }
 
-                
+
                 else if (!VerificarEmail.EmailValidator.IsValidEmail(email))
                 {
                     MessageBox.Show("Email inválido.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -61,11 +61,7 @@ namespace Projeto_Login
                     MessageBox.Show("Nome inválido. O nome deve conter apenas letras e espaços.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                     return;
                 }
-                else if  (!ValidarTelefone.ValidarTelefones(telefone))
-                {
-                    MessageBox.Show("Telefone inválido. O telefone deve estar no formato (XX) XXXX-XXXX.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                    return;
-                }
+
                 //else if (!ValidarCpf.ValidarCpf(cpf))
                 //{
                 //    MessageBox.Show("CPF inválido. O CPF deve conter 11 dígitos.", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
@@ -73,9 +69,11 @@ namespace Projeto_Login
                 //}
                 else
                 {
-                    
+
                 }
 
+
+                MessageBox.Show("Cadastro realizado com sucesso!", "Sucesso", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
 
 
@@ -100,12 +98,12 @@ namespace Projeto_Login
         {
             //limpar formulario
             txtConfirmarSenha.Text = " ";
-            txtCpf.Text = " ";
+            maskedCpf.Text = " ";
             txtEmail.Text = " ";
             txtNome.Text = " ";
             txtSenha.Text = " ";
-            txtTelefone.Text = " ";
-            txtUsuario.Text = " ";
+            maskedTxtTelefone.Text = " ";
+           
             txtNome.Focus();
 
         }
@@ -123,7 +121,23 @@ namespace Projeto_Login
 
         private void txtEmail_TextChanged(object sender, EventArgs e)
         {
-            
+
+        }
+
+        private void txtTelefone_TextChanged(object sender, EventArgs e)
+        {
+
+
+        }
+
+        private void maskedTxtTelefone_MaskInputRejected(object sender, MaskInputRejectedEventArgs e)
+        {
+            maskedTxtTelefone.Mask = "(00) 00000-0000"; // Formato para celular (11 dígitos)                                                    // Ou, se quiser aceitar telefone fixo (10 dígitos):                                                   // maskedTextBox1.Mask = "(00) 0000-00009"; // O "9" no final é opcional
+        }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }
