@@ -34,20 +34,18 @@
             txtNome = new TextBox();
             label1 = new Label();
             label2 = new Label();
-            label3 = new Label();
-            txtUsuario = new TextBox();
             label4 = new Label();
             txtEmail = new TextBox();
             label5 = new Label();
             txtConfirmarSenha = new TextBox();
             label6 = new Label();
             txtSenha = new TextBox();
-            txtCpf = new TextBox();
-            txtTelefone = new TextBox();
             label7 = new Label();
             label8 = new Label();
             btnLimparFormulario = new Button();
             pictureBox2 = new PictureBox();
+            maskedTxtTelefone = new MaskedTextBox();
+            maskedCpf = new MaskedTextBox();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
@@ -93,41 +91,27 @@
             label2.AutoSize = true;
             label2.Location = new Point(12, 78);
             label2.Name = "label2";
-            label2.Size = new Size(40, 15);
+            label2.Size = new Size(94, 15);
             label2.TabIndex = 4;
-            label2.Text = "Nome";
-            // 
-            // label3
-            // 
-            label3.AutoSize = true;
-            label3.Location = new Point(12, 131);
-            label3.Name = "label3";
-            label3.Size = new Size(47, 15);
-            label3.TabIndex = 6;
-            label3.Text = "Usuario";
-            // 
-            // txtUsuario
-            // 
-            txtUsuario.Location = new Point(12, 149);
-            txtUsuario.Name = "txtUsuario";
-            txtUsuario.Size = new Size(143, 23);
-            txtUsuario.TabIndex = 5;
+            label2.Text = "Nome completo";
             // 
             // label4
             // 
             label4.AutoSize = true;
-            label4.Location = new Point(161, 131);
+            label4.Location = new Point(12, 131);
             label4.Name = "label4";
             label4.Size = new Size(36, 15);
             label4.TabIndex = 8;
             label4.Text = "Email";
+            label4.Click += label4_Click;
             // 
             // txtEmail
             // 
-            txtEmail.Location = new Point(161, 149);
+            txtEmail.Location = new Point(12, 149);
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(193, 23);
             txtEmail.TabIndex = 7;
+            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label5
             // 
@@ -163,21 +147,6 @@
             txtSenha.TabIndex = 11;
             txtSenha.TextChanged += txtSenha_TextChanged;
             // 
-            // txtCpf
-            // 
-            txtCpf.Location = new Point(109, 195);
-            txtCpf.Name = "txtCpf";
-            txtCpf.Size = new Size(88, 23);
-            txtCpf.TabIndex = 13;
-            txtCpf.TextChanged += textBox6_TextChanged;
-            // 
-            // txtTelefone
-            // 
-            txtTelefone.Location = new Point(12, 195);
-            txtTelefone.Name = "txtTelefone";
-            txtTelefone.Size = new Size(88, 23);
-            txtTelefone.TabIndex = 14;
-            // 
             // label7
             // 
             label7.AutoSize = true;
@@ -190,7 +159,7 @@
             // label8
             // 
             label8.AutoSize = true;
-            label8.Location = new Point(109, 177);
+            label8.Location = new Point(207, 177);
             label8.Name = "label8";
             label8.Size = new Size(28, 15);
             label8.TabIndex = 16;
@@ -215,24 +184,39 @@
             pictureBox2.TabIndex = 18;
             pictureBox2.TabStop = false;
             // 
+            // maskedTxtTelefone
+            // 
+            maskedTxtTelefone.Location = new Point(12, 195);
+            maskedTxtTelefone.Mask = "(00) 00000-0000";
+            maskedTxtTelefone.Name = "maskedTxtTelefone";
+            maskedTxtTelefone.Size = new Size(100, 23);
+            maskedTxtTelefone.TabIndex = 19;
+            maskedTxtTelefone.MaskInputRejected += maskedTxtTelefone_MaskInputRejected;
+            // 
+            // maskedCpf
+            // 
+            maskedCpf.Location = new Point(207, 195);
+            maskedCpf.Mask = "000.000.000-00";
+            maskedCpf.Name = "maskedCpf";
+            maskedCpf.Size = new Size(100, 23);
+            maskedCpf.TabIndex = 20;
+            // 
             // CadastraUser
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(456, 287);
+            Controls.Add(maskedCpf);
+            Controls.Add(maskedTxtTelefone);
             Controls.Add(btnLimparFormulario);
             Controls.Add(label8);
             Controls.Add(label7);
-            Controls.Add(txtTelefone);
-            Controls.Add(txtCpf);
             Controls.Add(label6);
             Controls.Add(txtSenha);
             Controls.Add(label5);
             Controls.Add(txtConfirmarSenha);
             Controls.Add(label4);
             Controls.Add(txtEmail);
-            Controls.Add(label3);
-            Controls.Add(txtUsuario);
             Controls.Add(label2);
             Controls.Add(label1);
             Controls.Add(txtNome);
@@ -254,19 +238,17 @@
         private TextBox txtNome;
         private Label label1;
         private Label label2;
-        private Label label3;
-        private TextBox txtUsuario;
         private Label label4;
         private TextBox txtEmail;
         private Label label5;
         private TextBox txtConfirmarSenha;
         private Label label6;
         private TextBox txtSenha;
-        private TextBox txtCpf;
-        private TextBox txtTelefone;
         private Label label7;
         private Label label8;
         private Button btnLimparFormulario;
         private PictureBox pictureBox2;
+        private MaskedTextBox maskedTxtTelefone;
+        private MaskedTextBox maskedCpf;
     }
 }
