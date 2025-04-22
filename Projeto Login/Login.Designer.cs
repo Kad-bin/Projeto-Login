@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Login));
+            btnCadatrar = new Button();
             label1 = new Label();
             label2 = new Label();
             btnLogin = new Button();
@@ -44,15 +45,26 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
             SuspendLayout();
             // 
+            // btnCadatrar
+            // 
+            btnCadatrar.BackgroundImage = Properties.Resources.key;
+            btnCadatrar.FlatStyle = FlatStyle.Popup;
+            btnCadatrar.Location = new Point(328, 135);
+            btnCadatrar.Name = "btnCadatrar";
+            btnCadatrar.Size = new Size(69, 59);
+            btnCadatrar.TabIndex = 0;
+            btnCadatrar.UseVisualStyleBackColor = true;
+            btnCadatrar.Click += btnCadatrar_Click;
+            // 
             // label1
             // 
             label1.AutoSize = true;
-            label1.Font = new Font("Segoe UI Light", 9F, FontStyle.Italic, GraphicsUnit.Point, 0);
-            label1.Location = new Point(219, 175);
+            label1.Font = new Font("Segoe UI", 14.25F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            label1.Location = new Point(202, 169);
             label1.Name = "label1";
-            label1.Size = new Size(134, 15);
+            label1.Size = new Size(97, 25);
             label1.TabIndex = 1;
-            label1.Text = "*Caso nao tenha cadastro";
+            label1.Text = "Cadastrar";
             label1.Click += label1_Click;
             // 
             // label2
@@ -83,7 +95,6 @@
             txtNome.Name = "txtNome";
             txtNome.Size = new Size(316, 23);
             txtNome.TabIndex = 4;
-            txtNome.TextChanged += txtNome_TextChanged;
             // 
             // label3
             // 
@@ -109,7 +120,6 @@
             txtEmail.Name = "txtEmail";
             txtEmail.Size = new Size(129, 23);
             txtEmail.TabIndex = 6;
-            txtEmail.TextChanged += txtEmail_TextChanged;
             // 
             // label5
             // 
@@ -139,19 +149,18 @@
             // 
             // pictureBox2
             // 
-            pictureBox2.Image = (Image)resources.GetObject("pictureBox2.Image");
-            pictureBox2.Location = new Point(359, 164);
+            pictureBox2.Image = Properties.Resources.arrow_right;
+            pictureBox2.Location = new Point(276, 144);
             pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(40, 37);
+            pictureBox2.Size = new Size(97, 50);
             pictureBox2.TabIndex = 11;
             pictureBox2.TabStop = false;
-            pictureBox2.Click += pictureBox2_Click;
             // 
             // Login
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(411, 206);
+            ClientSize = new Size(411, 208);
             Controls.Add(label1);
             Controls.Add(pictureBox1);
             Controls.Add(label5);
@@ -162,6 +171,7 @@
             Controls.Add(txtNome);
             Controls.Add(btnLogin);
             Controls.Add(label2);
+            Controls.Add(btnCadatrar);
             Controls.Add(pictureBox2);
             Name = "Login";
             Text = "Login";
@@ -172,6 +182,8 @@
         }
 
         #endregion
+
+        private Button btnCadatrar;
         private Label label1;
         private Label label2;
         private Button btnLogin;
